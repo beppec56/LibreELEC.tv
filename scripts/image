@@ -42,7 +42,8 @@ if [ "$LIBREELEC_VERSION" = "devel" ]; then
   fi
   GIT_ABBREV=$(git log -1 --pretty=format:%h)
   DEVEL_VERSION=$LIBREELEC_VERSION
-  LIBREELEC_VERSION=$LIBREELEC_VERSION-$BUILD_DATE-r$GIT_BUILD-g$GIT_ABBREV
+  GIT_BRANCH_NAME=`git branch |grep "*" | sed 's/* //g'`_
+  LIBREELEC_VERSION=$LIBREELEC_VERSION-$BUILD_DATE-$GIT_BRANCH_NAME$GIT_ABBREV
 fi
 
 # Get origin url, fix git:// and git@github.com: urls if necessary
