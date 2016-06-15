@@ -17,12 +17,13 @@
 ################################################################################
 
 PKG_NAME="kodi-theme-Confluence"
-PKG_VERSION="16.1-c327c53"
+# oe-6.95.2.1-Jarvis-beppe
+PKG_VERSION="16.1-a0969c3"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="http://www.kodi.tv"
-PKG_URL="$DISTRO_SRC/$PKG_NAME-$PKG_VERSION.tar.xz"
+PKG_URL="http://localhost/openelec/$PKG_NAME-$PKG_VERSION.tar.xz"
 PKG_DEPENDS_TARGET="toolchain kodi:host"
 PKG_PRIORITY="optional"
 PKG_SECTION="mediacenter"
