@@ -1,11 +1,9 @@
 #!/bin/bash
 CURRENT_BRANCH=`git branch |grep "*" | sed 's/* //g'`
 echo "Current branch is: $CURRENT_BRANCH"
-#git fetch upstream-ro-fm
-git checkout master && git fetch upstream-ro && git pull upstream-ro +master:master
-#git fetch upstream-ro-xbmc
-#git checkout master-xbmc && git fetch upstream-ro-xbmc && git pull upstream-ro-xbmc +master:master-xbmc
-#attualizza openelec-5.0
-git checkout openelec-7.0
-git merge upstream-ro/openelec-7.0
+git fetch --tags upstream-ro && \
+git checkout master && \
+git merge upstream-ro/master && \
+git checkout libreelec-7.0 && \
+git merge upstream-ro/libreelec-7.0 && \
 git checkout $CURRENT_BRANCH
