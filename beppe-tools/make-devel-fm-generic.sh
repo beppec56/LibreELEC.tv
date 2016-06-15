@@ -11,7 +11,7 @@ XBMC_T=master
 
 GIT_BRANCH=`git branch |grep "*" | sed 's/* //g'`
 GIT_SHASH=`git log -n1 --format=%h`
-LOG_FILE="../make-oe_fm_dev-"$GIT_BRANCH"_"$GIT_SHASH"-"$DATE".log"
+LOG_FILE="../make-le_fm_dev-"$GIT_BRANCH"_"$GIT_SHASH"-"$DATE".log"
 
 echo "Log file è: $LOG_FILE"
 echo "per leggere il log:"
